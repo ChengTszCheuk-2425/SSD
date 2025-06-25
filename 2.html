@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防騙資訊 - 假網站與勒索</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .lang-switch {
+            cursor: pointer;
+            margin-left: 15px;
+        }
+        .content-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .content-section img {
+            width: 300px; 
+            height: auto; 
+            margin-left: 20px; 
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="style.js"></script>
+    
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" id="site-title">防騙資訊</a>
+    <span class="lang-switch" id="lang-switch" onclick="switchLanguage()">切換語言</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" id="link-definition">定義詐騙</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="2.html" id="link-fake-websites">假網站與勒索</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="3.html" id="link-preventing-scams">如何提防騙子</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="content-section">
+        <div>
+            <h2 id="heading-fake-websites">假網站與勒索</h2>
+            <p id="text-fake-websites">假網站的特徵包括域名相似、低質量內容等。</p>
+            <p id="example-fake-websites">勒索詐騙通常包括威脅受害者，要求支付金錢以避免發布敏感資訊。</p>
+        </div>
+        <img src="../images/image2.png" alt="Scamming Image" />
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    let language = 'zh'; // 默認語言為中文
+
+    const content = {
+        zh: {
+            title: '防騙資訊 - 假網站與勒索',
+            fakeWebsites: '假網站與勒索',
+            fakeText: '假網站的特徵包括域名相似、低質量內容等。',
+            fakeExample: '勒索詐騙通常包括威脅受害者，要求支付金錢以避免發布敏感資訊。',
+            langSwitch: '切換語言',
+            navLinks: {
+                definition: '定義詐騙',
+                fakeWebsites: '假網站與勒索',
+                preventingScams: '如何提防騙子'
+            }
+        },
+        en: {
+            title: 'Scam Information - Fake Websites and Blackmail',
+            fakeWebsites: 'Fake Websites and Blackmail',
+            fakeText: 'Characteristics of fake websites include similar domain names and low-quality content.',
+            fakeExample: 'Blackmail scams often involve threatening victims to pay money to avoid releasing sensitive information.',
+            langSwitch: 'Switch Language',
+            navLinks: {
+                definition: 'Definition of Scamming',
+                fakeWebsites: 'Fake Websites and Blackmail',
+                preventingScams: 'How to Prevent Scams'
+            }
+        }
+    };
+
+    function switchLanguage() {
+        language = language === 'zh' ? 'en' : 'zh';
+        updateContent();
+    }
+
+    function updateContent() {
+        document.getElementById('site-title').innerText = content[language].title;
+        document.getElementById('heading-fake-websites').innerText = content[language].fakeWebsites;
+        document.getElementById('text-fake-websites').innerText = content[language].fakeText;
+        document.getElementById('example-fake-websites').innerText = content[language].fakeExample;
+
+        document.getElementById('link-definition').innerText = content[language].navLinks.definition;
+        document.getElementById('link-fake-websites').innerText = content[language].navLinks.fakeWebsites;
+        document.getElementById('link-preventing-scams').innerText = content[language].navLinks.preventingScams;
+
+        document.getElementById('lang-switch').innerText = content[language].langSwitch; // 更新語言切換按鈕的文本
+    }
+</script>
+</body>
+</html>

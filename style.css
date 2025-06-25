@@ -1,0 +1,55 @@
+/* 仅包含字体控制按钮的样式 */
+.font-controls {
+    display: inline-flex;
+    margin-left: 15px;
+    align-items: center;
+}
+
+.font-btn {
+    padding: 2px 8px;
+    margin: 0 2px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    background: #f8f9fa;
+    font-size: 0.9rem;
+}
+
+.font-btn:hover {
+    background: #e9ecef;
+}
+
+.font-btn.active {
+    background: #007bff;
+    color: white;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .font-controls {
+        margin-left: 0;
+        margin-top: 10px;
+        order: 2; /* 在移动端调整显示顺序 */
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+body {
+    background-color: #f5f5dc; 
+}
+head{
+    background-color: #9f6969;
+}
+.navbar {
+    background: linear-gradient(to right, #D4A764 50%, #FF8F00 80%) !important;
+    color: rgb(235, 19, 30);
+}
+
+.content-section {
+    background-color: rgba(244, 233, 233, 0.9);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+}
+div{
+    color: #923709;
+}
