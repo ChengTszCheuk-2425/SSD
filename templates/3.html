@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防騙資訊 - 如何提防騙子</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .lang-switch {
+            cursor: pointer;
+            margin-left: 15px;
+        }
+        .content-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .content-section img {
+            width: 300px; 
+            height: auto; 
+            margin-left: 20px; 
+        }
+        .survey-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="style.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" id="site-title">防騙資訊</a>
+    <span class="lang-switch" id="lang-switch" onclick="switchLanguage()">切換語言</span>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html" id="link-definition">定義詐騙</a></li>
+            <li class="nav-item"><a class="nav-link" href="2.html" id="link-fake-websites">假網站與勒索</a></li>
+            <li class="nav-item"><a class="nav-link" href="3.html" id="link-preventing-scams">如何提防騙子</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="content-section">
+        <div>
+            <h2 id="heading-preventing-scams">如何提防騙子</h2>
+            <p id="text-preventing-scams-1">1. **核實信息來源**: 在提供個人信息之前，確保檢查網站或發件人的合法性。</p>
+            <p id="text-preventing-scams-2">2. **使用強密碼**: 選擇複雜而獨特的密碼，並定期更換。</p>
+            <p id="text-preventing-scams-3">3. **不隨意點擊鏈接**: 對於來自不明來源的電子郵件或短信中的鏈接保持警惕。</p>
+            <p id="text-preventing-scams-4">4. **啟用雙重驗證**: 在可用的情況下，啟用雙重驗證以增強帳戶安全。</p>
+            <p id="text-preventing-scams-5">5. **警惕緊急要求**: 如果有人要求你立即採取行動或支付款項，請保持懷疑，並進行核實。</p>
+        </div>
+        <img src="../images/image3.png" alt="Preventing Scams" />
+    </div>
+
+    <div class="survey-section">
+        <h3 id="survey-title">請參加我們的調查！</h3>
+        <p id="survey-text">你的意見對我們非常重要，請花幾分鐘填寫調查。</p>
+        <p id="survey-link">調查鏈接: <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeKsek_M7l8umQeWVDI2ECfA87sz5yhYwAa-Pt4FbDR0N1MeA/viewform?embedded=true" width="640" height="1585" frameborder="0" marginheight="0" marginwidth="0">
+		載入中…</iframe>點此參加調查</a></p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    let language = 'zh'; // 默認語言為中文
+
+    const content = {
+        zh: {
+            title: '防騙資訊 - 如何提防騙子',
+            preventingScams: '如何提防騙子',
+            tips: [
+                '1. 核實信息來源: 在提供個人信息之前，確保檢查網站或發件人的合法性。',
+                '2. 使用強密碼: 選擇複雜而獨特的密碼，並定期更換。',
+                '3. 不隨意點擊鏈接: 對於來自不明來源的電子郵件或短信中的鏈接保持警惕。',
+                '4. 啟用雙重驗證: 在可用的情況下，啟用雙重驗證以增強帳戶安全。',
+                '5. 警惕緊急要求: 如果有人要求你立即採取行動或支付款項，請保持懷疑，並進行核實。'
+            ],
+            surveyTitle: '請參加我們的調查！',
+            surveyText: '你的意見對我們非常重要，請花幾分鐘填寫調查。',
+            surveyLink: '調查鏈接: 點此參加調查',
+            langSwitch: '切換語言',
+            navLinks: {
+                definition: '定義詐騙',
+                fakeWebsites: '假網站與勒索',
+                preventingScams: '如何提防騙子'
+            }
+        },
+        en: {
+            title: 'Scam Information - How to Prevent Scams',
+            preventingScams: 'How to Prevent Scams',
+            tips: [
+                '1. Verify information sources: Ensure to check the legitimacy of websites or senders before providing personal information.',
+                '2. Use strong passwords: Choose complex and unique passwords, and change them regularly.',
+                '3. Do not click on links indiscriminately: Be cautious with links in emails or messages from unknown sources.',
+                '4. Enable two-factor authentication: Activate it whenever possible to enhance account security.',
+                '5. Be wary of urgent requests: If someone asks you to take immediate action or pay money, remain skeptical and verify.'
+            ],
+            surveyTitle: 'Please Participate in Our Survey!',
+            surveyText: 'Your feedback is very important to us. Please take a few minutes to fill out the survey.',
+            surveyLink: 'Survey link: Click to participate',
+            langSwitch: 'Switch Language',
+            navLinks: {
+                definition: 'Definition of Scamming',
+                fakeWebsites: 'Fake Websites and Blackmail',
+                preventingScams: 'How to Prevent Scams'
+            }
+        }
+    };
+
+    function switchLanguage() {
+        language = language === 'zh' ? 'en' : 'zh';
+        updateContent();
+    }
+
+    function updateContent() {
+        document.getElementById('site-title').innerText = content[language].title;
+        document.getElementById('heading-preventing-scams').innerText = content[language].preventingScams;
+
+        content[language].tips.forEach((tip, index) => {
+            document.getElementById(`text-preventing-scams-${index + 1}`).innerText = tip;
+        });
+
+        // Update survey section
+        document.getElementById('survey-title').innerText = content[language].surveyTitle;
+        document.getElementById('survey-text').innerText = content[language].surveyText;
+        document.getElementById('survey-link').innerHTML = content[language].surveyLink + ' <a href="https://forms.gle/SdekrALEZxVd2gmr6" target="_blank">' + (language === 'zh' ? '點此參加調查' : 'Click to participate') + '</a>';
+
+        document.getElementById('lang-switch').innerText = content[language].langSwitch;
+
+        document.getElementById('link-definition').innerText = content[language].navLinks.definition;
+        document.getElementById('link-fake-websites').innerText = content[language].navLinks.fakeWebsites;
+        document.getElementById('link-preventing-scams').innerText = content[language].navLinks.preventingScams;
+    }
+</script>
+</body>
+</html>
